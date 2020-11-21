@@ -1,6 +1,7 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
-const darkBlue = '#252A62';
+import { colors } from '../globalStyles';
 
 export const HeaderContainer = styled.nav`
     background: #FAFAFA;
@@ -21,29 +22,52 @@ export const HeaderContainer = styled.nav`
 export const HeaderContent = styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
     z-index: 1;
     width: 100%;
-    max-width: 850px;
-    color: #424242;
-    padding: 20px 0;
-    
-    img {
-        width: 90px;
+    color: ${colors.notSoBlack};
+    padding: 10px 0;
+
+    .main {
+        display: flex;
     }
 `
 
-export const HeaderList = styled.ul`
-    list-style: none;
-    display: flex;
+export const NavLogo = styled.img`
+    width: 90px;
+`
+
+export const NavLink =  styled(Link)`
+    text-decoration: none;
+    color: ${colors.notSoBlack};
     font-weight: 600;
     font-size: 1rem;
-    margin: auto 0;
+`
 
-    li {
+export const LinksList = styled.div`
+    list-style: none;
+    display: flex;
+    margin: auto 55px;
+
+    ${NavLink} {
         padding: 0 16px;
     }
-    li:last-child {
-        color: ${darkBlue};
+    ${NavLink}:last-child {
         padding: 0 0 0 16px;
+    }
+`
+
+export const MyBtn = styled(Link)`
+    transition: 0.3s;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    background-color: ${colors.darkBlue};
+    border: 1px solid ${colors.darkBlue};
+    color: ${colors.notSoWhite};
+    margin: 0 2px;
+    &:hover {
+        background-color: ${colors.notSoWhite};
+        color: ${colors.darkBlue};
     }
 `

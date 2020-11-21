@@ -1,19 +1,38 @@
-import {HeaderContent, HeaderContainer, HeaderList} from './styles';
+import { Link } from 'react-router-dom';
+
+import {
+      HeaderContent,
+      HeaderContainer, 
+      LinksList,
+      NavLink,
+      NavLogo,
+      MyBtn
+} from './styles';
+
+import {
+  Wrapper
+} from '../globalStyles';
 
 import logo from '../../assets/logo.svg';
 
 function Header() {
   return (<>
     <HeaderContainer>
-      <HeaderContent>
-        <img alt="Logo" src={logo}></img>
-        <HeaderList>
-          <li>Sobre</li>
-          <li>Registrar um Pet</li>
-          <li>Entrar</li>
-          <li>Cadastre-se</li>
-        </HeaderList>
-      </HeaderContent>
+      <Wrapper>
+        <HeaderContent>
+          <Link to='/'><NavLogo alt="Logo" src={logo}></NavLogo></Link>
+          <div className="main">
+            <LinksList>
+              <NavLink to='/pets'>Sobre</NavLink>
+              <NavLink to='/pets'>Registrar um Pet</NavLink>
+            </LinksList>
+            <div>
+              <MyBtn to='/pets'>Entrar</MyBtn>
+              <MyBtn to='/pets'>Cadastre-se</MyBtn>
+            </div>
+          </div>
+        </HeaderContent>
+      </Wrapper>
     </HeaderContainer>
   </>);
 }
