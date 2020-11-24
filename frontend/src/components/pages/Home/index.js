@@ -1,8 +1,11 @@
-import { Wrapper } from '../../globalStyles';
+import { MyBtn, Wrapper } from '../../globalStyles';
 import { 
   Banner,
   BannerContent,
   BannerButtons,
+  InitialSection,
+  CardText,
+  DashboardSection,
   Link
 }
 from './styles';
@@ -10,17 +13,50 @@ from './styles';
 function Home() {
   return (<>
     <Banner>
-      <BannerContent>
-        <p>Uma patinha precisa de você!</p>
-        <BannerButtons>
-          <Link>Ache um Cão</Link>
-          <Link>Ache um Gato</Link>
-        </BannerButtons>
-      </BannerContent>
+      <Wrapper>
+        <BannerContent>
+          <p>Uma patinha precisa de você!</p>
+          <BannerButtons>
+            <Link>
+            Ache um Cão</Link>
+            <Link>
+            Ache um Gato</Link>
+          </BannerButtons>
+        </BannerContent>
+      </Wrapper>
     </Banner>
     <Wrapper>
-      COCOZIN
+      <InitialSection>
+        <div className="row">
+          <CardText>
+            <p>
+              Procure por um animal para adoção
+              pelo seu computador, tablet, smarthphone...
+            </p>
+            <MyBtn>Pesquisar</MyBtn>
+          </CardText>
+          <CardText>
+            <p>
+              Veja nossos artigos sobre como tratar
+              seu companheiro, seja ele um gato ou cão
+            </p>
+            <MyBtn>Informações</MyBtn>
+          </CardText>
+          <CardText>
+            <p>
+              Procure por um animal para adoção<br/>
+              pelo seu computador, tablet, smarthphone...
+            </p>
+            <MyBtn>Pesquisar</MyBtn>
+          </CardText>
+        </div>
+      </InitialSection>
     </Wrapper>
+    <DashboardSection>
+      <Wrapper>
+        Olá
+      </Wrapper>
+    </DashboardSection>
   </>);
 }
 

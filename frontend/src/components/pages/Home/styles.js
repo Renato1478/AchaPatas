@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 
 import banner00 from '../../../assets/pets/cat00.jpg';
 
-import { colors } from '../../globalStyles';
+import { colors, MyBtn } from '../../globalStyles';
 
 export const Banner = styled.section`
     background-color: rgba(0, 0, 0, 0.8);
@@ -21,7 +21,7 @@ export const BannerContent = styled.div`
     color: ${colors.notSoWhite};
 
     p {
-        font-size: 22px;
+        font-size: 24px;
         text-shadow: 1px 2px 3px #000;
     }
 `
@@ -57,4 +57,34 @@ export const BannerButtons = styled.div`
             }
         }
     }
+`
+
+export const InitialSection = styled.div`
+    margin: 70px 0px;
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        div {
+            padding: 0px 40px;
+            p {
+                font-weight: 600;
+                font-size: 12px;
+            }
+            ${MyBtn} {
+                margin: 15px 0;
+            }
+        }
+    }
+`
+
+export const DashboardSection = styled.div`
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    background-color: ${colors.veryLightGreen};
+`
+
+export const CardText = styled.div`
+    max-width: 400px;
+    width: 100%;
 `

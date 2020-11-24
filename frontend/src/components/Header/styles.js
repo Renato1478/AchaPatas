@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { colors } from '../globalStyles';
+import { colors, MyBtn } from '../globalStyles';
 
 export const HeaderContainer = styled.nav`
     background: #FAFAFA;
@@ -30,6 +30,10 @@ export const HeaderContent = styled.div`
 
     .main {
         display: flex;
+
+        ${MyBtn} {
+            margin: 0 3px;
+        }
     }
 `
 
@@ -54,20 +58,5 @@ export const LinksList = styled.div`
     }
     ${NavLink}:last-child {
         padding: 0 0 0 16px;
-    }
-`
-
-export const MyBtn = styled(Link)`
-    transition: 0.3s;
-    text-decoration: none;
-    padding: 6px 10px;
-    border-radius: 8px;
-    background-color: ${colors.darkBlue};
-    border: 1px solid ${colors.darkBlue};
-    color: ${colors.notSoWhite};
-    margin: 0 2px;
-    &:hover {
-        background-color: ${colors.notSoWhite};
-        color: ${colors.darkBlue};
     }
 `

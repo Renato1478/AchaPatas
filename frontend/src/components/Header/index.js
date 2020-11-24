@@ -6,11 +6,11 @@ import {
       LinksList,
       NavLink,
       NavLogo,
-      MyBtn
 } from './styles';
 
 import {
-  Wrapper
+  Wrapper,
+  MyBtn
 } from '../globalStyles';
 
 import logo from '../../assets/logo.svg';
