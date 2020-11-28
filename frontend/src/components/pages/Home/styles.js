@@ -7,12 +7,14 @@ import { colors, MyBtn } from '../../globalStyles';
 
 export const Banner = styled.section`
     background-color: rgba(0, 0, 0, 0.8);
-    background-image: url(${banner00});
-    background-size: contain;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url(${banner00});
+    background-size: 100% auto;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 22rem;
-    width: auto;
     text-align: center;
 `
 
@@ -79,12 +81,13 @@ export const InitialSection = styled.div`
     }
 `
 
-export const DashboardSection = styled.div`
-    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
-    background-color: ${colors.veryLightGreen};
-`
-
 export const CardText = styled.div`
     max-width: 400px;
     width: 100%;
+`
+
+export const DashboardSection = styled.div`
+    clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
+    background-color: ${colors.veryLightGreen};
+    padding-top: 40px;
 `

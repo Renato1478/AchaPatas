@@ -1,4 +1,5 @@
 import { MyBtn, Wrapper } from '../../globalStyles';
+import PetCard from '../../PetCard/index';
 import { 
   Banner,
   BannerContent,
@@ -54,7 +55,7 @@ function Home() {
     </Wrapper>
     <DashboardSection>
       <Wrapper>
-        Olá
+        <PetCard/>
       </Wrapper>
     </DashboardSection>
   </>);
