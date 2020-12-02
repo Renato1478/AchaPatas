@@ -11,7 +11,7 @@ import {
 import {
   Wrapper,
   MyBtn
-} from '../globalStyles';
+} from '../styles/globalStyles';
 
 import logo from '../../assets/logo.svg';
 

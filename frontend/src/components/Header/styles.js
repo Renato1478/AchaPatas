@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { colors, MyBtn } from '../globalStyles';
+import { colors, MyBtn } from '../styles/globalStyles';
 
 export const HeaderContainer = styled.nav`
     background: #FAFAFA;

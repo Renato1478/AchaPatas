@@ -3,7 +3,7 @@ import { Link as LinkR } from 'react-router-dom';
 
 import banner00 from '../../../assets/pets/cat00.jpg';
 
-import { colors, MyBtn } from '../../globalStyles';
+import { colors, MyBtn } from '../../styles/globalStyles';
 
 export const Banner = styled.section`
     background-color: rgba(0, 0, 0, 0.8);
@@ -62,32 +62,44 @@ export const BannerButtons = styled.div`
 `
 
 export const InitialSection = styled.div`
-    margin: 70px 0px;
+    margin: 50px 0px;
 
     .row {
-        display: flex;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 40px;
         margin-bottom: 30px;
-        div {
-            padding: 0px 40px;
-            p {
-                font-weight: 600;
-                font-size: 12px;
-            }
-            ${MyBtn} {
-                margin: 15px 0;
-            }
+        img {
+            width: 100%;
         }
     }
+    padding: 0 10px;
 `
 
 export const CardText = styled.div`
     max-width: 400px;
     width: 100%;
+    margin: auto 0;
+    p {
+        font-weight: 600;
+        font-size: 12px;
+    }
+    ${MyBtn} {
+        margin: 15px 0;
+    }
 `
 
 export const DashboardSection = styled.div`
+    width: 100%;
     clip-path: polygon(0 8%, 100% 0, 100% 100%, 0% 100%);
     background-color: ${colors.veryLightGreen};
-    padding-top: 40px;
+    padding: 40px 0;
+    padding-top: 70px;
+`
+
+export const Dashboard = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 40px;
 `

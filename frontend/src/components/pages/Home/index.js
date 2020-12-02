@@ -1,4 +1,4 @@
-import { MyBtn, Wrapper } from '../../globalStyles';
+import { MyBtn, Wrapper } from '../../styles/globalStyles';
 import PetCard from '../../PetCard/index';
 import { 
   Banner,
@@ -7,9 +7,12 @@ import {
   InitialSection,
   CardText,
   DashboardSection,
+  Dashboard,
   Link
 }
 from './styles';
+
+import svg from '../../../assets/icons/undraw_good_doggy_4wfq.svg';
 
 function Home() {
   return (<>
@@ -43,19 +46,18 @@ function Home() {
             </p>
             <MyBtn>Informações</MyBtn>
           </CardText>
-          <CardText>
-            <p>
-              Procure por um animal para adoção<br/>
-              pelo seu computador, tablet, smarthphone...
-            </p>
-            <MyBtn>Pesquisar</MyBtn>
-          </CardText>
+          <img src={svg}/>
         </div>
       </InitialSection>
     </Wrapper>
     <DashboardSection>
       <Wrapper>
-        <PetCard/>
+        <Dashboard>
+          <PetCard/>
+          <PetCard/>
+          <PetCard/>
+          <PetCard/>
+        </Dashboard>
       </Wrapper>
     </DashboardSection>
   </>);
