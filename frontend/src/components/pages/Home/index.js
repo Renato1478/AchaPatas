@@ -1,5 +1,4 @@
 import { MyBtn, Wrapper } from '../../styles/globalStyles';
-import PetCard from '../../PetCard/index';
 import { 
   Banner,
   BannerContent,
@@ -8,11 +7,14 @@ import {
   CardText,
   DashboardSection,
   Dashboard,
+  CardsList,
   Link
 }
 from './styles';
 
 import svg from '../../../assets/icons/undraw_good_doggy_4wfq.svg';
+
+import PetCard from '../../PetCard/index';
 
 function Home() {
   return (<>
@@ -53,10 +55,24 @@ function Home() {
     <DashboardSection>
       <Wrapper>
         <Dashboard>
-          <PetCard/>
-          <PetCard/>
-          <PetCard/>
-          <PetCard/>
+          <h1>Cães para adoção</h1>
+          <CardsList>
+            <PetCard/>
+            <PetCard/>
+            <PetCard/>
+            <PetCard/>
+            <PetCard/>
+          </CardsList>
+        </Dashboard>
+        <Dashboard>
+          <h1>Gatos para adoção</h1>
+          <CardsList>
+            <PetCard/>
+            <PetCard/>
+            <PetCard/>
+            <PetCard/>
+            <PetCard/>
+          </CardsList>
         </Dashboard>
       </Wrapper>
     </DashboardSection>

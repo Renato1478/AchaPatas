@@ -9,7 +9,7 @@ export const HeaderContainer = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1rem;
+    font-size: 14px;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -45,7 +45,6 @@ export const NavLink =  styled(Link)`
     text-decoration: none;
     color: ${colors.notSoBlack};
     font-weight: 600;
-    font-size: 1rem;
 `
 
 export const LinksList = styled.div`

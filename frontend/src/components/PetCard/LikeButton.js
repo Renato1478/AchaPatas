@@ -12,8 +12,8 @@ const Hearth = styled.svg`
 `
 
 const Circle = styled.span`
-    height: 35px;
-    width: 35px;
+    height: 2rem;
+    width: 2rem;
     background-color: ${colors.notSoWhite};
     border-radius: 50%;
     display: flex;
@@ -24,6 +24,7 @@ const Circle = styled.span`
             fill: rgba(255,0,0,0.5);
         }
     }
+    cursor: pointer;
 `
 
 export default function LikeButton() {

@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-size: 12px;
 }
 
 body {
@@ -13,6 +12,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #424242;
+  background-color: #FAFAFA;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 code {
