@@ -1,14 +1,21 @@
-import { MyBtn, Wrapper } from '../styles/globalStyles';
+import { Wrapper } from '../styles/globalStyles';
 
 import {
-  FooterContainer
+  FooterContainer,
+  SocialMediaList
 } from './styles';
 
 export default function Footer() {
   return (<>
     <FooterContainer>
       <Wrapper>
-        ©2020 AchaPatas.com.br
+        <div>©2020 AchaPatas.com.br</div>
+        <SocialMediaList>
+          {/* <li><FontAwesomeIcon icon={faCoffee} size="lg"/></li>
+          <li><FontAwesomeIcon icon={faCoffee} size="lg"/></li>
+          <li><FontAwesomeIcon icon={faCoffee} size="lg"/></li>
+          <li><FontAwesomeIcon icon={faCoffee} size="lg"/></li> */}
+        </SocialMediaList>
       </Wrapper>
     </FooterContainer>
   </>);

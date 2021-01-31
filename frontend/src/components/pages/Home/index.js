@@ -12,6 +12,11 @@ import {
 }
 from './styles';
 
+// icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBook, faCat, faDog, faSearch } from '@fortawesome/free-solid-svg-icons';
+
+// img/svg
 import svg from '../../../assets/icons/undraw_good_doggy_4wfq.svg';
 
 import PetCard from '../../PetCard/index';
@@ -23,10 +28,12 @@ function Home() {
         <BannerContent>
           <p>Uma patinha precisa de você!</p>
           <BannerButtons>
-            <Link>
-            Ache um Cão</Link>
-            <Link>
-            Ache um Gato</Link>
+            <Link to='/'>
+              <FontAwesomeIcon icon={faDog} size="2x"/> Ache um Cão
+            </Link>
+            <Link to='/'>
+              <FontAwesomeIcon icon={faCat} size="2x"/> Ache um Gato
+            </Link>
           </BannerButtons>
         </BannerContent>
       </Wrapper>
@@ -39,14 +46,14 @@ function Home() {
               Procure por um animal para adoção
               pelo seu computador, tablet, smarthphone...
             </p>
-            <MyBtn>Pesquisar</MyBtn>
+            <MyBtn to='/'>Pesquisar <FontAwesomeIcon icon={faSearch}/></MyBtn>
           </CardText>
           <CardText>
             <p>
               Veja nossos artigos sobre como tratar
               seu companheiro, seja ele um gato ou cão
             </p>
-            <MyBtn>Informações</MyBtn>
+            <MyBtn to='/'>Informações <FontAwesomeIcon icon={faBook}/></MyBtn>
           </CardText>
           <img src={svg}/>
         </div>

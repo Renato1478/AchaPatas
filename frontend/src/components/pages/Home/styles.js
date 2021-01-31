@@ -14,8 +14,9 @@ export const Banner = styled.section`
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    min-height: 17rem;
+    min-height: 23rem;
     text-align: center;
+    padding-top: 100px;
 `
 
 export const BannerContent = styled.div`
@@ -41,16 +42,17 @@ export const BannerButtons = styled.div`
     ${Link} {
         transition: 0.3s;
         padding: 4px 11px;
+        padding-top: 12px;
         background-color: ${colors.mainGreen};
         &:hover {
             color: ${colors.notSoWhite};
             background-color: ${colors.mainBlue};
         }
         &:first-child {
-            border-radius: 12px 0 0 12px;
+            border-radius: 16px 0 0 16px;
         }
         &:last-child {
-            border-radius: 0 12px 12px 0;
+            border-radius: 0 16px 16px 0;
             color: ${colors.notSoWhite};
             background-color: ${colors.darkGreen};
             &:hover {

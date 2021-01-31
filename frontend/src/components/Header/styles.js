@@ -3,29 +3,12 @@ import { Link } from 'react-router-dom';
 
 import { colors, MyBtn } from '../styles/globalStyles';
 
-export const HeaderContainer = styled.nav`
-    background: #FAFAFA;
-    min-height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 14px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    
-    @media screen and (max-width: 960px) {
-        transition: 0.8s all ease;
-    }
-`
-
 export const HeaderContent = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
     width: 100%;
-    color: ${colors.notSoBlack};
     padding: 10px 0;
 
     .main {
@@ -43,8 +26,8 @@ export const NavLogo = styled.img`
 
 export const NavLink =  styled(Link)`
     text-decoration: none;
-    color: ${colors.notSoBlack};
     font-weight: 600;
+    color: ${colors.notSoWhite};
 `
 
 export const LinksList = styled.div`
@@ -57,5 +40,28 @@ export const LinksList = styled.div`
     }
     ${NavLink}:last-child {
         padding: 0 0 0 16px;
+    }
+`
+
+export const HeaderContainer = styled.nav`
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: ${colors.notSoWhite};
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    transition: all ease 0.4s;
+
+    &.scrolling{
+        background-color: #FAFAFA;
+        color: ${colors.notSoBlack};
+
+        ${NavLink} {
+            color: ${colors.notSoBlack};
+        }
     }
 `
