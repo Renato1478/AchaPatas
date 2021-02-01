@@ -11,7 +11,7 @@ import {
 
 import {
   Wrapper,
-  MyBtn
+  MainLink
 } from '../styles/globalStyles';
 
 import logo from '../../assets/logo.svg';
@@ -45,8 +45,8 @@ function Header() {
               <NavLink to='/pets'>Registrar um Pet</NavLink>
             </LinksList>
             <div>
-              <MyBtn to='/pets'>Entrar</MyBtn>
-              <MyBtn to='/pets'>Cadastre-se</MyBtn>
+              <MainLink to='/pets'>Entrar</MainLink>
+              <MainLink to='/pets'>Cadastre-se</MainLink>
             </div>
           </div>
         </HeaderContent>

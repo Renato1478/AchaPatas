@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-import { colors, MyBtn } from '../styles/globalStyles';
+import { colors, MainLink } from '../styles/globalStyles';
 
 export const HeaderContent = styled.div`
     display: flex;
@@ -14,7 +14,7 @@ export const HeaderContent = styled.div`
     .main {
         display: flex;
 
-        ${MyBtn} {
+        ${MainLink} {
             margin: 0 3px;
         }
     }

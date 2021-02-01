@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { Link as LinkR } from 'react-router-dom';
 
-import banner00 from '../../../assets/pets/cat00.jpg';
+import banner00 from '../../assets/pets/cat00.jpg';
 
-import { colors, MyBtn } from '../../styles/globalStyles';
+import { colors, MainLink } from '../../components/styles/globalStyles';
 
 export const Banner = styled.section`
     background-color: rgba(0, 0, 0, 0.8);
@@ -86,7 +86,7 @@ export const CardText = styled.div`
         font-weight: 600;
         font-size: 12px;
     }
-    ${MyBtn} {
+    ${MainLink} {
         margin: 15px 0;
     }
 `
@@ -96,21 +96,5 @@ export const DashboardSection = styled.div`
     clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0% 100%);
     background-color: ${colors.veryLightGreen};
     padding-top: 4.5rem;
-`
-
-export const Dashboard = styled.div`
-    text-align: center;
-    h1 {
-        font-size: 1.2rem;
-    }
-    padding-bottom: 40px;
-`
-
-export const CardsList = styled.div`
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-    column-gap: 15px;
-    padding-top: 20px;
-    text-align: initial;
+    padding-bottom: 1.5rem;
 `

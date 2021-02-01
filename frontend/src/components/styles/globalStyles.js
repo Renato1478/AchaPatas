@@ -19,7 +19,7 @@ export const Wrapper = styled.div`
     margin: auto auto;
 `
 
-export const MyBtn = styled(Link)`
+export const MainLink = styled(Link)`
     display: inline-flexbox;
     transition: 0.3s;
     text-decoration: none;

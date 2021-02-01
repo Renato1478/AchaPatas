@@ -2,9 +2,9 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 // PAGES
-const Home = lazy(() => import('./components/pages/Home'));
-const Pets = lazy(() => import('./components/pages/Pets'));
-const SignUp = lazy(() => import('./components/pages/Home'));
+const Home = lazy(() => import('./pages/Home'));
+const Pets = lazy(() => import('./pages/Pets'));
+const SignUp = lazy(() => import('./pages/Home'));
 
 const Header = lazy(() => import('./components/Header'));
 const Footer = lazy(() => import('./components/Footer'));
