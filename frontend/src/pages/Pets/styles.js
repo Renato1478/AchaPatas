@@ -5,6 +5,10 @@ import banner00 from '../../assets/pets/cat00.jpg';
 
 import { colors, MainLink } from '../../components/styles/globalStyles';
 
+export const PetGallery = styled.img`
+    
+`
+
 export const DashboardSection = styled.div`
     width: 100%;
     clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0% 100%);

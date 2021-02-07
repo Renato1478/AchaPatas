@@ -6,20 +6,15 @@ const Home = lazy(() => import('./pages/Home'));
 const Pets = lazy(() => import('./pages/Pets'));
 const SignUp = lazy(() => import('./pages/Home'));
 
-const Header = lazy(() => import('./components/Header'));
-const Footer = lazy(() => import('./components/Footer'));
-
 export default function Routes() {
     return (
         <Router>
             <Suspense fallback={<div>Loading...</div>}>
-                <Header/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/pets" component={Pets}/>
                     <Route exact path="/signup" component={SignUp}/>
                 </Switch>
-                <Footer/>
             </Suspense>
         </Router>
     )

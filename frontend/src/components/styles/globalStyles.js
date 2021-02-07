@@ -29,7 +29,7 @@ export const MainLink = styled(Link)`
     border: 1px solid ${colors.darkBlue};
     color: ${colors.notSoWhite};
     &:hover {
-        background-color: ${colors.notSoWhite};
+        background-color: rgba(250,250,250, 0.2);
         color: ${colors.darkBlue};
     }
 `

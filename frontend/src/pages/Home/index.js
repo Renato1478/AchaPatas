@@ -1,3 +1,4 @@
+import { lazy } from 'react';
 import { MainLink, Wrapper } from '../../components/styles/globalStyles';
 import { 
   Banner,
@@ -21,8 +22,12 @@ import svg from '../../assets/icons/undraw_good_doggy_4wfq.svg';
 
 import PetCardDashboard from '../../components/PetCardDashboard/index'; 
 
+const Header = lazy(() => import('../../components/Header'));
+const Footer = lazy(() => import('../../components/Footer'));
+
 function Home() {
   return (<>
+    <Header homePg={true}/>
     <Banner>
       <Wrapper>
         <BannerContent>
@@ -65,6 +70,7 @@ function Home() {
         <PetCardDashboard/>
       </Wrapper>
     </DashboardSection>
+    <Footer/>
   </>);
 }
 

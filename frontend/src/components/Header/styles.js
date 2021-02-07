@@ -56,12 +56,17 @@ export const HeaderContainer = styled.nav`
     width: 100%;
     transition: all ease 0.4s;
 
-    &.scrolling{
-        background-color: #FAFAFA;
+    /* on scrolling */
+    background-color: #FAFAFA;
+    color: ${colors.notSoBlack};
+    ${NavLink} {
         color: ${colors.notSoBlack};
-
+    }
+    &.on-top{
+        background-color: transparent;
+        color: ${colors.notSoWhite};
         ${NavLink} {
-            color: ${colors.notSoBlack};
+            color: ${colors.notSoWhite};
         }
     }
 `

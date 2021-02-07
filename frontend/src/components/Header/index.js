@@ -16,19 +16,22 @@ import {
 
 import logo from '../../assets/logo.svg';
 
-function Header() {
+function Header({ homePg }) {
 
   function animateHeader(offset) {
     if(offset > 50) {
-      document.querySelector('#topHeader').classList.add('scrolling');
+      document.querySelector('#topHeader').classList.remove('on-top');
     } else {
-      document.querySelector('#topHeader').classList.remove('scrolling');
+      document.querySelector('#topHeader').classList.add('on-top');
     }
   }
 
   useEffect(() => {
-    window.onscroll = () => {
+    if(homePg) {
       animateHeader(window.pageYOffset);
+      window.onscroll = () => {
+        animateHeader(window.pageYOffset);
+      }
     }
   }, []);
 
