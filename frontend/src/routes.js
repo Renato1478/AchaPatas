@@ -12,8 +12,9 @@ export default function Routes() {
             <Suspense fallback={<div>Loading...</div>}>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/pets" component={Pets}/>
+                    <Route exact path="/pets/:id" component={Pets}/>
                     <Route exact path="/signup" component={SignUp}/>
+                    <Route path="/" component={Home}/>
                 </Switch>
             </Suspense>
         </Router>

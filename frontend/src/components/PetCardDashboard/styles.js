@@ -14,7 +14,7 @@ export const Dashboard = styled.div`
 export const CardsList = styled.div`
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(5, 150px);
+    grid-template-columns: repeat(5, 160px);
     column-gap: 15px;
     padding-top: 20px;
     text-align: initial;

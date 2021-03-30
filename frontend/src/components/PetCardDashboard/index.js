@@ -6,10 +6,11 @@ import {
 }
 from './styles';
 
-export default function PetCardDashboard() {
+export default function PetCardDashboard(props) {
+  const {title} = props;
   return (<>
     <Dashboard>
-        <h1>Animais relacionados</h1>
+        <h1>{title}</h1>
         <CardsList>
             <PetCard/>
             <PetCard/>

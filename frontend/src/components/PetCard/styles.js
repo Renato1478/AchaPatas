@@ -46,7 +46,7 @@ export const Card = styled(Link)`
     max-width: 10rem;
     border-radius: 4px;
     background-color: ${colors.notSoWhite};
-    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.25);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1);
     transition: ease 0.4s;
     &:hover {
         transform: translateY(-2px);

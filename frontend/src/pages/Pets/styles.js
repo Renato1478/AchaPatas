@@ -1,13 +1,6 @@
 import styled from 'styled-components';
-import { Link as LinkR } from 'react-router-dom';
 
-import banner00 from '../../assets/pets/cat00.jpg';
-
-import { colors, MainLink } from '../../components/styles/globalStyles';
-
-export const PetGallery = styled.img`
-    
-`
+import { colors } from '../../components/styles/globalStyles';
 
 export const DashboardSection = styled.div`
     width: 100%;

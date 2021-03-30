@@ -9,7 +9,8 @@ import {
   DashboardSection,
   Dashboard,
   CardsList,
-  Link
+  Link,
+  NewsSection
 }
 from './styles';
 
@@ -19,6 +20,7 @@ import { faBook, faCat, faDog, faSearch } from '@fortawesome/free-solid-svg-icon
 
 // img/svg
 import svg from '../../assets/icons/undraw_good_doggy_4wfq.svg';
+import banner00 from '../../assets/pets/cat00.jpg';
 
 import PetCardDashboard from '../../components/PetCardDashboard/index'; 
 
@@ -43,8 +45,8 @@ function Home() {
         </BannerContent>
       </Wrapper>
     </Banner>
-    <Wrapper>
-      <InitialSection>
+    <InitialSection>
+      <Wrapper>
         <div className="row">
           <CardText>
             <p>
@@ -62,12 +64,48 @@ function Home() {
           </CardText>
           <img src={svg}/>
         </div>
-      </InitialSection>
-    </Wrapper>
+      </Wrapper>
+    </InitialSection>
+    <DashboardSection className="bg-polygon">
+      <Wrapper>
+        <PetCardDashboard title={'Gatos para Adoção por Perto'}/>
+      </Wrapper>
+    </DashboardSection>
+    <NewsSection>
+      <Wrapper>
+        <div className="main">
+          <h2>Novidades</h2>
+          <div className="row">
+            <div className="materia">
+              <img src={banner00}/>
+              <div className="content">
+                <span>Por AchaPatas • Feb 11, 2016</span>
+                <h4>5 Pet Safety Tips to Always Remember</h4>
+                <p>
+                  Talvez o maior ativo do produtor rural, o solo é a base da produção moderna opa
+                  de alimentos e fibras. Alguns cuidam dele asa com masdasdasd...
+                </p>
+              </div>
+            </div>
+            <div className="materia">
+              <img src={banner00}/>
+              <div className="content">
+                <span>Por AchaPatas • Feb 11, 2016</span>
+                <h4>5 Pet Safety Tips to Always Remember</h4>
+                <p>
+                  Talvez o maior ativo do produtor rural, o solo é a base da produção moderna opa
+                  de alimentos e fibras. Alguns cuidam dele asa com muito zelo...
+                </p>
+              </div>
+            </div>
+          </div>
+          <MainLink to="/pets/1">Leia mais</MainLink>
+        </div>
+      </Wrapper>
+    </NewsSection>
     <DashboardSection>
       <Wrapper>
-        <PetCardDashboard/>
-        <PetCardDashboard/>
+        <PetCardDashboard title={'Cães para Adoção por Perto'}/>
       </Wrapper>
     </DashboardSection>
     <Footer/>

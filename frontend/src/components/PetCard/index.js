@@ -9,7 +9,7 @@ from './styles';
 
 export default function PetCard() {
   return (<>
-    <Card to='/pets'>
+    <Card to='/pets/1'>
         <TopCard>
           <h1>Lorem</h1>
           <LikeButton/>

@@ -71,11 +71,52 @@ export const InitialSection = styled.div`
         grid-template-columns: repeat(3, minmax(0, 1fr));
         column-gap: 40px;
         margin-bottom: 30px;
+        padding: 0 20px;
         img {
             width: 100%;
         }
     }
-    padding: 0 10px;
+`
+
+export const NewsSection = styled.div`
+    margin: 40px 0px;
+
+    .main {
+        display: block;
+        text-align: center;
+        .row {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: 40px;
+            padding: 40px 20px 10px;
+            .materia {
+                display: flex;
+                img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 4%;
+                }
+                .content {
+                    padding: 0px 20px 10px;
+                    text-align: left;
+                    span {
+                        font-size: 0.8rem;
+                    }
+                    h4 {
+                        padding-top: 0.4rem;
+                    }
+                    p {
+                        padding-top: 0.8rem;
+                    }
+                }
+            }
+        }
+        ${MainLink} {
+            margin-top: 1rem;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
 `
 
 export const CardText = styled.div`
@@ -93,8 +134,12 @@ export const CardText = styled.div`
 
 export const DashboardSection = styled.div`
     width: 100%;
-    clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0% 100%);
     background-color: ${colors.veryLightGreen};
-    padding-top: 4.5rem;
+    padding-top: 2.5rem;
     padding-bottom: 1.5rem;
+
+    &.bg-polygon {
+    padding-top: 4.5rem;
+        clip-path: polygon(0 3.5rem, 100% 0, 100% 100%, 0% 100%);
+    }
 `

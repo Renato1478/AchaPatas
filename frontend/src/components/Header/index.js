@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import {
@@ -16,18 +16,19 @@ import {
 
 import logo from '../../assets/logo.svg';
 
-function Header({ homePg }) {
+function Header(props) {
 
-  function animateHeader(offset) {
-    if(offset > 50) {
-      document.querySelector('#topHeader').classList.remove('on-top');
-    } else {
-      document.querySelector('#topHeader').classList.add('on-top');
-    }
-  }
+  const [onTop, setOnTop] = useState(false);
 
   useEffect(() => {
-    if(homePg) {
+    function animateHeader(offset) {
+      if(offset > 50) {
+        setOnTop(false);
+      } else {
+        setOnTop(true);
+      }
+    }
+    if(props.homePg) {
       animateHeader(window.pageYOffset);
       window.onscroll = () => {
         animateHeader(window.pageYOffset);
@@ -36,7 +37,7 @@ function Header({ homePg }) {
   }, []);
 
   return (<>
-    <HeaderContainer id='topHeader'>
+    <HeaderContainer className={`${onTop ? 'on-top' : ''}`}>
       <Wrapper>
         <HeaderContent>
           <Link to='/'>

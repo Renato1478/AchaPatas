@@ -15,7 +15,7 @@ export const colors = {
 export const Wrapper = styled.div`
     align-items: center;
     width: 100%;
-    max-width: 850px;
+    max-width: 900px;
     margin: auto auto;
 `
 
