@@ -7,10 +7,9 @@ import {
   InitialSection,
   CardText,
   DashboardSection,
-  Dashboard,
-  CardsList,
   Link,
-  NewsSection
+  BlogSection,
+  NewsletterSection
 }
 from './styles';
 
@@ -19,7 +18,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBook, faCat, faDog, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 // img/svg
-import svg from '../../assets/icons/undraw_good_doggy_4wfq.svg';
+import svg from '../../assets/icons/undraw_pet_adoption_2qkw.svg';
+import svg2 from '../../assets/icons/undraw_good_doggy_4wfq.svg';
 import banner00 from '../../assets/pets/cat00.jpg';
 
 import PetCardDashboard from '../../components/PetCardDashboard/index'; 
@@ -62,7 +62,7 @@ function Home() {
             </p>
             <MainLink to='/'>Informações <FontAwesomeIcon icon={faBook}/></MainLink>
           </CardText>
-          <img src={svg}/>
+          <img src={svg} alt="ilustração"/>
         </div>
       </Wrapper>
     </InitialSection>
@@ -71,13 +71,13 @@ function Home() {
         <PetCardDashboard title={'Gatos para Adoção por Perto'}/>
       </Wrapper>
     </DashboardSection>
-    <NewsSection>
+    <BlogSection>
       <Wrapper>
         <div className="main">
-          <h2>Novidades</h2>
+          <h2>Blog</h2>
           <div className="row">
             <div className="materia">
-              <img src={banner00}/>
+              <img src={banner00} alt="banner"/>
               <div className="content">
                 <span>Por AchaPatas • Feb 11, 2016</span>
                 <h4>5 Pet Safety Tips to Always Remember</h4>
@@ -88,7 +88,7 @@ function Home() {
               </div>
             </div>
             <div className="materia">
-              <img src={banner00}/>
+              <img src={banner00} alt="banner"/>
               <div className="content">
                 <span>Por AchaPatas • Feb 11, 2016</span>
                 <h4>5 Pet Safety Tips to Always Remember</h4>
@@ -99,15 +99,32 @@ function Home() {
               </div>
             </div>
           </div>
-          <MainLink to="/pets/1">Leia mais</MainLink>
+          <MainLink to="/pets/1">Veja Nosso Blog</MainLink>
         </div>
       </Wrapper>
-    </NewsSection>
+    </BlogSection>
     <DashboardSection>
       <Wrapper>
         <PetCardDashboard title={'Cães para Adoção por Perto'}/>
       </Wrapper>
     </DashboardSection>
+    <NewsletterSection>
+      <Wrapper>
+        <div className="main">
+          <div className="title">
+            <h2>Receba Nossas<br/> Novidades</h2>
+          </div>
+          <form method="post" action="">
+            <div className="form-control">
+              <label htmlFor="email">Email</label>
+              <input name="email" type="email" placeholder="Insira seu Email"></input>
+              <button type="submit">Inscrever-se</button>
+            </div>
+          </form>
+          <img className="overlayed-img" src={svg2} alt="ilustração"/>
+        </div>
+      </Wrapper>
+    </NewsletterSection>
     <Footer/>
   </>);
 }

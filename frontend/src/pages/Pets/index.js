@@ -1,8 +1,6 @@
 import React, { lazy } from 'react';
 // import ReactDOM from 'react-dom'; 
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-
 // // icons
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

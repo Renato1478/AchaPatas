@@ -35,7 +35,7 @@ export const BodyCard = styled.div`
     }
     .sex-age {
         color: #999999;
-        font-weight: thick;
+        font-weight: thin;
         margin-bottom: 2px;
     }
 `

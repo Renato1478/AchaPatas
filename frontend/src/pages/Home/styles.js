@@ -78,7 +78,7 @@ export const InitialSection = styled.div`
     }
 `
 
-export const NewsSection = styled.div`
+export const BlogSection = styled.div`
     margin: 40px 0px;
 
     .main {
@@ -115,6 +115,74 @@ export const NewsSection = styled.div`
             margin-top: 1rem;
             padding-left: 50px;
             padding-right: 50px;
+        }
+    }
+`
+
+export const NewsletterSection = styled.div`
+    padding: 30px 0px;
+
+    .main {
+        display: grid;
+        position: relative;
+        grid-template-columns: 1fr 4fr;
+        column-gap: 30px;
+        padding: 0px 20px;
+
+        .title {
+            display: flex;
+            color: ${colors.mainBlue};
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            background-color: ${colors.veryLightGreen};
+            width: 160px;
+            height: 160px;
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            .form-control {
+                label {
+                    display: block;
+                    font-weight: bold;
+                    padding: 4px 0px;
+                }
+                input {
+                    border: 0;
+                    outline: none;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    font-size: 12px;
+                    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                    margin-right: 12px;
+                    width: 18rem;
+                }
+                button {
+                    border: 0;
+                    outline: none;
+                    box-sizing: border-box;
+                    padding: 10px;
+                    font-size: 12px;
+                    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1);
+                    border-radius: 8px;
+                    color: #FFF;
+                    background-color: ${colors.mainGreen};
+                    margin-right: 12px;
+                }
+            }
+        }
+        .overlayed-img {
+            width: 280px;
+            height: 280px;
+            opacity: 0.4;
+            position: absolute; 
+            z-index: -1;
+            top: -60px; 
+            right: 30px;
         }
     }
 `
